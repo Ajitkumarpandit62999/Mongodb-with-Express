@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Form</title>
+    <style>
+        /* Basic styling for the form */
+        body {
+            background-color: #1a1a2e;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: #162447;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            width: 350px;
+            text-align: center;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+        .form-container input, 
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: #1f4068;
+            color: #fff;
+            font-size: 14px;
+        }
+        .form-container input[type="submit"] {
+            background: #e43f5a;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .form-container input[type="submit"]:hover {
+            background: #6610f2;
+        }
+        /* Futuristic glowing effect */
+        .form-container input:focus, 
+        .form-container textarea:focus {
+            box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+        }
+        .form-container input[type="submit"]:focus {
+            box-shadow: 0 0 15px #6610f2, 0 0 25px #6610f2, 0 0 35px #6610f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add new Message</h2>
+        <form action="/" method="POST">
+            <input type="text" name="from" placeholder="From" required>
+            <input type="text" name="to" placeholder="To" required>
+            <textarea name="msg" placeholder="Your Message" rows="4" required></textarea>
+            <input type="datetime-local" name="created_at" required>
+            <input type="submit" value="Create new Chat...">
+        </form>
+    </div>
+</body>
+</html>
